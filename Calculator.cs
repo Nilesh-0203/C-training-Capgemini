@@ -7,23 +7,17 @@ public class HelloWorld
 {
     public static void Main(string[] args)
     {
-        int n=0;
-        bool flag=false;
-        while(!flag){
-            try{
-                Console.WriteLine ("Welcome to Calculator : ");
-            Console.WriteLine ("Enter the 1 for Calculation : ");
-            Console.WriteLine ("Enter the 2 for exit : ");
-            n=Convert.ToInt32(Console.ReadLine());
-            flag=true;
-            if(flag && n==1){
+    
+        int e=0;
+        
+        while(e==0){
                 Console.WriteLine ("Enter the number1 : ");
                 double num1=Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine ("Enter the number2 : ");
                 double num2=Convert.ToDouble(Console.ReadLine());
                 
                 Console.WriteLine ("Enter the operator : ");
-                char ch=Console.ReadKey().KeyChar;
+                char ch=Convert.ToChar(Console.ReadLine());
                 Console.WriteLine ();
                 switch (ch){
                     case '+':
@@ -46,12 +40,11 @@ public class HelloWorld
                     Console.WriteLine ("Enter Wrong Input");
                     break;
                   }
-                  flag=false;
-               }
-            }
-            catch(Exception e){
-                flag=false;
-            }
+            Console.WriteLine ("Enter the 1 for Calculation : ");
+            Console.WriteLine ("Enter the 2 for exit : ");
+            int c=Convert.ToInt32(Console.ReadLine());
+            if(c==1)e=0;
+            else e=1;
             }
         }
     }
